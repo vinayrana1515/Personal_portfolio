@@ -140,4 +140,20 @@ function scrollActive() {
 
     console.log("Section highlight working!")
 }
-window.addEventListener('scroll', scrollActive)
+window.addEventListener( 'scroll', scrollActive )
+
+
+// EMAIL 
+
+function sendEmail() {
+    Email.send( {
+    SecureToken : "4c1bde20-3c8c-4d18-84e7-ec1cac0fe428",
+    To : 'vinayrana700@gmail.com',
+    From : "ranaproject15@gmail.com",
+    Subject : document.getElementById("formSubject").value,
+        Body: "Name: " + document.getElementById( "formName" ).value + "<br> Email: " + document.getElementById( "formEmailId" ).value +
+            "<br> Body: " + document.getElementById( "formBody" ).value 
+}).then(
+  message => alert(message)
+);
+}
